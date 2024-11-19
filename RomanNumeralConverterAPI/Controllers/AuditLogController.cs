@@ -1,9 +1,6 @@
 ﻿using LogDBContext;
 using LoggingRepository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using System.Collections.Generic;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace RomanNumeralConverterAPI.Controllers
