@@ -30,9 +30,11 @@ namespace RomanNumeralConverterAPI
                 options.SuppressMapClientErrors = true;
             });
 
+            //Using In-Memory Only Because this is a demo.
+            //
             services.AddDbContext<LoggingDBContext>(options =>
             options.ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
-            .UseInMemoryDatabase("LoggingDB")); ; // Shared in-memory database
+            .UseInMemoryDatabase("LoggingDB")); 
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); // Scoped repository
 
